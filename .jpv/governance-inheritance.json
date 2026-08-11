@@ -1,0 +1,13 @@
+{
+  "schema_version": "jpv.governance-inheritance.v1",
+  "authority_repository": "JayPVentures-LLC/jpv-governance",
+  "authority_commit": "44052ebbd98b895a98194204218b1dae187f40e3",
+  "authority_policies": ["policies/DETECTION-ATTRIBUTION-EVIDENCE-INVARIANT.md","policies/detection-attribution-evidence-invariant.v1.json"],
+  "runtime_authority_repository": "jaypVLabs/JPV-OS",
+  "runtime_authority_commit": "2e7b218bfac3216c32182028acbe68f719b5d7ac",
+  "runtime_policies": ["governance/standards/DETECTION-ATTRIBUTION-EVIDENCE-INVARIANT.md",".jpv/governance/detection-attribution-evidence-invariant.json"],
+  "required": true,
+  "failure_mode": "block",
+  "invariants": {"detection_distinct_from_attribution":true,"unknown_cause_is_valid_state":true,"unsupported_motive_intent_coordination_causation_forbidden":true,"downstream_may_strengthen_not_weaken":true},
+  "inherited_at": "2026-08-11T17:30:00Z"
+}
