@@ -4,11 +4,6 @@ compatibility_date = "2026-04-09"
 
 [vars]
 LOG_LEVEL = "info"
-AZURE_KEY_VAULT_URL = "https://replace-me.vault.azure.net"
-AZURE_TENANT_ID = "replace-me"
-AZURE_CLIENT_ID = "replace-me"
-APPINSIGHTS_CONNECTION_STRING = "InstrumentationKey=replace-me;IngestionEndpoint=https://eastus-0.in.applicationinsights.azure.com/"
-AZURE_ARCHIVE_ENDPOINT = "https://replace-me.example/archive/entitlements"
 
 [[kv_namespaces]]
 binding = "ENTITLEMENT_KV"
