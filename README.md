@@ -1,94 +1,40 @@
-# jaypventures-labs
+# JayPVentures LLC · Engineering and research
 
-Enterprise workspace for JayPVentures LLC systems, flagship website delivery, creator/member surfaces, worker prototypes, governance enforcement, and operating documentation.
+JayPVentures LLC explores systems architecture, operational automation, and privacy-conscious software design. This repository is a public entry point for the engineering work and developer conversations around JPV-OS.
 
-# One-Click Deploy
+[Developer discussions](https://github.com/JayPVentures-LLC/jpv-discussions/discussions) · [Sponsor the work](https://github.com/sponsors/JayPVentures-LLC) · [Collaboration inquiries](mailto:jayhere@jaypventuresllc.com)
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button?url=https://github.com/jaypventuresllc/jayventures-labs)](https://deploy.workers.cloudflare.com/?url=https://github.com/jaypventuresllc/jayventures-labs)
+## Engineering focus
 
-## Active Projects
+- **Architecture and boundaries:** how services, interfaces, and responsibilities fit together.
+- **Accountable automation:** explicit constraints, reviewable decisions, verification, and failure handling.
+- **Privacy and security:** data minimization, least privilege, and protection of the people affected by software.
+- **Developer experience:** clear documentation, accessible explanations, and reproducible examples suitable for public release.
 
-### Flagship Website
-- Location: `apps/flagship-site`
-- Runtime: Cloudflare Worker
-- Entry point: `src/index.ts`
-- Purpose: Enterprise-first flagship marketing site for `jaypventuresllc.com`
-- Public routes:
-  - `GET /`
-  - `GET /services`
-  - `GET /pricing`
-  - `GET /ventures`
-  - `GET /creator`
-  - `GET /all-ventures-access`
-  - `GET /music`
-  - `GET /travel`
-  - `GET /partnerships`
-  - `GET /insights`
-  - `GET /insights/:slug`
-  - `GET /trust`
-  - `GET /contact`
-  - `GET /privacy`
-  - `GET /terms`
-  - `GET /GOVERNANCE.md`
-  - `GET /SECURITY.md`
-  - `GET /PEOPLE-PROTECTION.md`
+These are areas of work and discussion. They are not certifications, independently validated performance results, or guarantees of production readiness.
 
-### Entitlement System
-- Location: `operations/entitlement-system`
-- Runtime: Cloudflare Worker
-- Entry point: `workers/stripeWebhook.ts`
-- Routes:
-  - `POST /webhook/stripe`
-  - `POST /admin/override`
-  - `POST /admin/discord-sync`
-  - `GET /health`
+## Explore and participate
 
-### Unified Intake Engine
-- Location: `wix/bookings`
-- Runtime: Cloudflare Worker
-- Entry point: `src/index.ts`
-- Routes:
-  - `POST /webhook/intake`
-  - `GET /metrics`
-  - `GET /inner-circle`
-  - `GET /inner-circle/metrics`
-  - `POST /inner-circle/backfill`
-  - `GET /creator`
-  - `GET /creator/metrics`
-  - `POST /creator/upload`
+Start with [developer engagement and sponsorship](PUBLIC_ENGAGEMENT.md), then join [JPV Discussions](https://github.com/JayPVentures-LLC/jpv-discussions/discussions) to ask architectural questions, critique published material, or propose a collaboration.
 
-## Local Tooling
+This repository also contains legacy experiments, website drafts, and tooling. Their presence does not establish that a system is deployed, supported, secure, or ready for production. Evaluate each artifact in its documented context before reuse.
 
-1. Install dependencies with `npm install` from the repo root.
-2. Create local secret files with `npm run setup:devvars`.
-3. Fill in real secrets and live bindings in the generated `.dev.vars` files and Wrangler configs.
-4. Run tests with `npm test`.
-5. Type-check with `npm run typecheck`.
-6. Start a Worker locally with:
-   - `npm run dev:website`
-   - `npm run dev:entitlement`
-   - `npm run dev:bookings`
-7. Validate deployment packaging without pushing with:
-   - `npm run deploy:dryrun:website`
-   - `npm run deploy:dryrun:entitlement`
-   - `npm run deploy:dryrun:bookings`
+Public contributions are welcome for documentation corrections, accessible explanations, architectural feedback, and examples explicitly approved for release. Discuss substantial proposals with a maintainer before investing in an implementation. Licenses apply to the files they cover; public discussion does not grant rights to private systems.
 
-## Trust, Governance, Security, and People Protection
+## Public and private boundaries
 
-- [GOVERNANCE.md](GOVERNANCE.md)
-- [SECURITY.md](SECURITY.md)
-- [PEOPLE-PROTECTION.md](PEOPLE-PROTECTION.md)
+Public engagement can cover reviewed architecture summaries, research, documented public interfaces, and sanitized examples. Private JPV-OS implementation, runtime systems, identity and access internals, payment and entitlement systems, credentials, operational configuration, and incident evidence remain outside this public contribution scope.
 
-JPV-OS systems must preserve human dignity, informed consent, explainability, accessibility, privacy, equal treatment, and protection from coercion, exploitation, discrimination, manipulative AI behavior, unsafe dependency models, and unlawful surveillance.
+Do not post private source, real user data, credentials, sensitive logs, or exploit details in public issues, pull requests, or discussions. Participation or sponsorship does not grant access to private repositories or production systems.
 
-No system is considered production-ready if it protects infrastructure while leaving people exposed.
+## Support the work
 
-## Deployment and Automation
-- [docs/flagship-site.md](docs/flagship-site.md)
-- [docs/github-setup.md](docs/github-setup.md)
-- [docs/github-settings-checklist.md](docs/github-settings-checklist.md)
-- [docs/production-review-checklist.md](docs/production-review-checklist.md)
+Support JayPVentures LLC through its [GitHub Sponsors page](https://github.com/sponsors/JayPVentures-LLC). The recipient is **JayPVentures-LLC**; current tiers and terms are shown on GitHub.
 
-## Promotion Policy
+For a research, documentation, tooling, or collaboration sponsorship proposal, contact [jayhere@jaypventuresllc.com](mailto:jayhere@jaypventuresllc.com). Sponsorship does not purchase confidential code, security exceptions, or control over technical decisions. Any separate deliverables require an explicit agreement.
 
-Code and documentation in this repository remain experimental until they are deployed, verified, reviewed for governance/security/people-protection compliance, and promoted into a dedicated production repository or platform environment.
+## Responsible security disclosure
+
+Follow this repository's [security policy](SECURITY.md) and report suspected vulnerabilities privately to [jayhere@jaypventuresllc.com](mailto:jayhere@jaypventuresllc.com). For the discussion hub, use [security@jaypventuresllc.com](mailto:security@jaypventuresllc.com) as published in its [community guidance](https://github.com/JayPVentures-LLC/jpv-discussions/blob/main/COMMUNITY.md).
+
+Include a minimal description, affected component, and safe reproduction details. Keep credentials, personal data, and active exploit details out of public channels. Public material is not authorization to test private or production systems.
